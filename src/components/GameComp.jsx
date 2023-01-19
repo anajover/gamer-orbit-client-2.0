@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { PulseLoader } from 'react-spinners'
 import { listGamesDetailsService } from '../services/games.services'
 
@@ -38,7 +38,7 @@ function GameComp(props) {
 
     return (
         <div>
-            <h3>{gameDetails.name}</h3>
+            <h3><Link to={`/videogames/${gameDetails.id}/details`}>{gameDetails.name}</Link></h3>
             <p>General rating: <strong>{gameDetails.rating}</strong></p>
             <p>Main genre: <strong>{gameDetails.genres[0].name}</strong></p>
             <p>Released: <strong>{gameDetails.released}</strong></p>

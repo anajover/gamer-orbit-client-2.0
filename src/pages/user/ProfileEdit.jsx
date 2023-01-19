@@ -53,7 +53,7 @@ function ProfileEdit() {
 
   useEffect(() => {
     getUserData()
-  })
+  }, [])
 
   const getUserData = async () => {
     try {

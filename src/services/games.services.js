@@ -4,8 +4,18 @@ import service from "./config.services";
 //* Creamos un servicio que busca todos los archivos de juegos.
 
 const listGamesService = () => {
-    console.log("Working.");
+    console.log("Working GamesList.");
     return service.get("/videogames")
+}
+
+const listNextGamesService = () => {
+    console.log("Working GamesListNext.");
+    return service.get("/videogames/next")
+}
+
+const listPreviousGamesService = () => {
+    console.log("Working GamesListPrevious.");
+    return service.get("/videogames/previous")
 }
 
 const listGamesDetailsService = (id) => {
@@ -21,6 +31,11 @@ const listGamesTrailersService = (id) => {
 const listGamesDbService = (id, body) => {
     console.log("Working collections.");
     return service.post(`/videogames/${id}/collections`, body)
+}
+
+const gamesByPlatformService = () => {
+    console.log("Working Platforms");
+    return service.get("/videogames/platform")
 }
 
 const commentsService = (id, body) => {
@@ -39,5 +54,8 @@ export {
     listGamesTrailersService,
     listGamesDbService,
     commentsService,
-    viewCommentsService
+    viewCommentsService,
+    listNextGamesService,
+    listPreviousGamesService,
+    gamesByPlatformService
 }

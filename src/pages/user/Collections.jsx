@@ -74,7 +74,7 @@ function Collections() {
       {
           gamesCollection.map( (eachCollection) => {
             
-            if (eachCollection.state === "isFinished") {
+            if (eachCollection.state === "isFinished" && eachCollection.userId === user._id) {
 
               return ( 
                <div className='collectiondiv'>
@@ -89,7 +89,7 @@ function Collections() {
 
             }
 
-            if (eachCollection.state === "isOwned") {
+            if (eachCollection.state === "isOwned" && eachCollection.userId === user._id) {
 
               return ( 
                <div className='collectiondiv'>
@@ -104,7 +104,7 @@ function Collections() {
 
             }
 
-            if (eachCollection.state === "isPlaying") {
+            if (eachCollection.state === "isPlaying" && eachCollection.userId === user._id) {
 
               return ( 
                <div className='collectiondiv'>
@@ -119,7 +119,7 @@ function Collections() {
 
             }
 
-            if (eachCollection.state === "isWished") {
+            if (eachCollection.state === "isWished" && eachCollection.userId === user._id) {
 
               return ( 
                <div className='collectiondiv'>

@@ -68,8 +68,9 @@ function Profile() {
         <br />
         <h1>¡Welcome again!</h1>
         <br />
-        <img src="http://via.placeholder.com/150x150" alt="Placeholder" />
-        {/* <img src={user.avatar} alt="user pic" width={300} /> */}
+        {user.avatar === undefined && <img src="https://res.cloudinary.com/daob4o6ic/image/upload/v1654991341/profile-pics/sdqlo4g5dilth4ieuygy.png" alt="Default pic" width={300} />  }
+       
+        {user.avatar !== undefined &&<img src={user.avatar} alt="user pic" width={300} />}
         <br /><br />
         <h6>Your username is <strong>{user.username}</strong></h6>
         <h6>Your email is <strong>{user.email}</strong></h6>

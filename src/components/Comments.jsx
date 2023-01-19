@@ -46,11 +46,11 @@ function Comments() {
                         <div>
                             <br /><br />
                             <Card className='container' >
+                                    <img src={each.usernameId.avatar} width={50}/>
                                     <Card.Title className="text-muted">User <strong>{each.usernameId.username}</strong> says:</Card.Title>
-                                    <Card.Subtitle className="text-muted">Created on <strong>{each.createdAt.slice(0,10)}</strong> at <strong>{each.createdAt.slice(11,19)}</strong></Card.Subtitle>
-                                    <br />
                                     <Card.Text>{each.comment}</Card.Text>
                                     <br />
+                                    <Card.Subtitle className="text-muted">Created on <strong>{each.createdAt.slice(0,10)}</strong> at <strong>{each.createdAt.slice(11,19)}</strong></Card.Subtitle>
                              </Card>
                         </div>
                     )

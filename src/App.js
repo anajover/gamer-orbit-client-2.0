@@ -17,6 +17,7 @@ import NotFound from './pages/error/NotFound';
 
 import IsPrivate from './components/IsPrivate';
 import MyNavbar from './components/MyNavbar';
+import VideogamesPlatform from './pages/VideogamesPlatforms';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Route path={"/"} element={ <Home/> } />
       <Route path={"/videogames"} element={ <Videogames/> } />
       <Route path={"/videogames/:id/details"} element={ <VideogamesDetails/> } />
+      <Route path={"/videogames/platform"} element={ <VideogamesPlatform/> } />
       <Route path={"/profile"} element={ <IsPrivate> <Profile/> </IsPrivate> } />
       <Route path={"/profile/:id/edit"} element={ <IsPrivate> <ProfileEdit/> </IsPrivate> } />
       <Route path={"/profile/collections"} element={ <IsPrivate> <Collections/> </IsPrivate>} />
