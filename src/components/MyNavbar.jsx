@@ -16,7 +16,7 @@ function MyNavbar() {
   const handleLogout = () => {
     localStorage.removeItem("authToken")
     authenticateUser()
-    // Para cuando haga logout, que se salga de la página de perfil.
+    // Para cuando haga logout, que se salga de la página de perfil
     navigate("/")
   }
 
